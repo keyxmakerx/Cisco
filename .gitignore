@@ -1,0 +1,8 @@
+SFO>enable
+SFO#configure terminal 
+SFO(config)#banner motd *you have connected to the sfo router.*
+SFO(config)#banner login &authorized personel only.
+unauthorized users will be vaporized immediatly!&
+SFO(config)#banner exec (Beam me up scotty!(
+SFO(config)#exit
+SFO#copy running-config startup-config
