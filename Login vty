@@ -1,0 +1,5 @@
+>enable
+Type Cisco as the password when prompted
+#config terminal
+(Conf)#line con 0
+(line)#password tp89jy5$
