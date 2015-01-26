@@ -1,0 +1,10 @@
+con t 
+banner #
+end
+ 
+banner motd #this is my banner#
+banner login #there are many like it#
+banner exec #This is my#
+exit
+copy run start 
+show running-config
