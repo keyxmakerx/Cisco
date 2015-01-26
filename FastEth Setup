@@ -1,0 +1,23 @@
+enable
+conf t
+#hostname Seattle
+#enable secret C27Tre3
+#line con 0
+password DW3YED
+login 
+line vty 0
+password 8HRT9T
+login
+line vty 1 4
+no password
+login 
+exit 
+interface FastEthernet0/0
+no shutdown
+ip address 10.31.47.254 255.255.240.0
+infterface FastEthernet0/1
+no shutdown
+ip address 10.31.63.254 255.255.240.0
+exit
+exit 
+copy run start
