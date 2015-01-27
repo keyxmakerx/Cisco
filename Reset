@@ -1,0 +1,6 @@
+Switch>enable
+Switch#delete flash:vlan.dat
+Delete filename [vlan.dat]?                   [Press Enter Key]
+Delete flash:vlan.dat? [confirm]          [ Reconfirm by pressing enter key]
+Switch#erase startup-config
+Switch#reload
