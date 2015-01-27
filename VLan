@@ -1,0 +1,72 @@
+#For 2960XL
+#Creating Vlan
+vlan database
+
+! Create vlans first, then map the switchports to them.
+!
+en
+!
+conf t
+!
+vlan 40
+name "Internal Only"
+exit
+!
+vlan 200
+name "Public Facing"
+exit
+!
+interface range gigabitEthernet 3/0/1 - 12
+switchport mode access
+switchport access vlan 40
+exit
+!
+interface range gigabitEthernet 4/0/1 - 12
+switchport mode access
+switchport access vlan 40
+exit
+!
+interface range gigabitEthernet 3/0/13 - 24
+switchport mode access
+switchport access vlan 200
+exit
+!
+interface range gigabitEthernet 4/0/13 - 24
+switchport mode access
+switchport access vlan 200
+exit
+exit
+!
+! run this to verify your work
+show vlan
+
+! First unmap the switchports from vlan, then delete them
+!
+en
+!
+conf t
+!
+interface range gigabitEthernet 3/0/1 - 12
+no switchport access vlan 40
+exit
+!
+interface range gigabitEthernet 4/0/1 - 12
+no switchport access vlan 40
+exit
+!
+interface range gigabitEthernet 3/0/13 - 24
+no switchport access vlan 200
+exit
+!
+interface range gigabitEthernet 4/0/13 - 24
+no switchport access vlan 200
+exit
+!
+no vlan 40
+!
+no vlan 200
+!
+exit
+!
+! run this to verify your work
+show vlan
