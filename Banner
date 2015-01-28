@@ -1,4 +1,4 @@
-con t 
+conf t 
 banner #
 end
  
