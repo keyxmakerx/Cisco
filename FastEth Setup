@@ -12,12 +12,9 @@ line vty 1 4
 no password
 login 
 exit 
-interface FastEthernet0/0
+int vlan1
 no shutdown
 ip address 10.31.47.254 255.255.240.0
-infterface FastEthernet0/1
-no shutdown
-ip address 10.31.63.254 255.255.240.0
 exit
 exit 
 copy run start
