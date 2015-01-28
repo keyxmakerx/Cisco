@@ -8,11 +8,11 @@ en
 !
 conf t
 !
-vlan 40
+int vlan 40
 name "Internal Only"
 exit
 !
-vlan 200
+int vlan 200
 name "Public Facing"
 exit
 !
