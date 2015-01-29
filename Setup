@@ -1,5 +1,5 @@
 enable 
-con t 
+conf t 
 host <Insert>
 line con 0
 password tp89jy5$
@@ -33,3 +33,7 @@ conf t
 switch(config)#ip default-gateway xxx.xxx.xxx.xxx
 switch(config)#interface vlan 1
 switch(config-if)#ip add 192.168.1.10 255.255.255.0
+exit
+interface fa0/2
+switchport access vlan 2
+switchport mode trunk
