@@ -1,1 +1,35 @@
- 
+enable 
+con t 
+host <Insert>
+line con 0
+password tp89jy5$
+banner #
+end
+banner motd #this is my banner#
+banner login #there are many like it#
+banner exec #This is my#
+exit
+copy run start 
+show running-config
+router con t
+router(config)#line vty 0 15 
+router(config-line)#password <password>
+router(config-line)#login
+login 
+line vty 0
+password 8HRT9T
+login
+line vty 1 4
+no password
+login 
+exit 
+vlan database
+int vlan1
+no shutdown
+exit
+exit 
+copy run start
+conf t
+switch(config)#ip default-gateway xxx.xxx.xxx.xxx
+switch(config)#interface vlan 1
+switch(config-if)#ip add 192.168.1.10 255.255.255.0
